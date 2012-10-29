@@ -1,0 +1,9 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Demo" table="demo" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="id" type="long">
+            <column name="Id"/>
+            <generator class="assigned"/>
+        </id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Taches" table="taches" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.TachesId">
+            <key-property name="liste" type="string">
+                <column name="liste" length="20"/>
+            </key-property>
+            <key-property name="tache" type="string">
+                <column name="tache" length="50"/>
+            </key-property>
+        </composite-id>
+        <property name="echeance" type="date">
+            <column name="echeance" length="13"/>
+        </property>
+        <property name="description" type="string">
+            <column name="description" length="130"/>
+        </property>
+        <property name="terminee" type="boolean">
+            <column name="terminee"/>
+        </property>
+        <property name="contact" type="string">
+            <column name="contact" length="50"/>
+        </property>
+        <property name="client" type="string">
+            <column name="client" length="15"/>
+        </property>
+    </class>
+</hibernate-mapping>

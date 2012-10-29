@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+
+<!-- Generated 09/18/2012 17:49:50
+
+Configuration for 'metiersDB' database service
+
+-->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+
+    <bean 
+        id="metiersDB"
+        class="com.metiersdb.MetiersDB"
+        scope="singleton"
+        lazy-init="true">
+        <property name="dataServiceManager">
+            <ref bean="metiersDBDataService"/>
+        </property>
+        <property name="taskManager">
+            <ref bean="metiersDBTaskMgr"/>
+        </property>
+    </bean>
+
+
+    <bean 
+        class="com.wavemaker.runtime.data.spring.WMPropertyPlaceholderConfigurer">
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="locations">
+            <list>
+                <value>classpath:metiersDB.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean 
+        id="metiersDBDataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource" 
+        lazy-init="true">
+        <property name="driverClassName" value="${metiersDB.driverClassName}"/>
+        <property name="url" value="${metiersDB.connectionUrl}"/>
+        <property name="username" value="${metiersDB.username}"/>
+        <property name="password" value="${metiersDB.password}"/>
+    </bean>
+
+
+    <bean 
+        id="metiersDBTxMgr" 
+        class="org.springframework.orm.hibernate3.HibernateTransactionManager"
+        lazy-init="true">
+        <property name="sessionFactory">
+            <ref bean="metiersDBSessionFactory"/>
+        </property>
+    </bean>
+
+
+    <bean 
+        id="metiersDBHibernateTemplate"
+        class="org.springframework.orm.hibernate3.HibernateTemplate"
+        lazy-init="true">
+        <property name="sessionFactory"> 
+            <ref bean="metiersDBSessionFactory"/>
+        </property>
+    </bean>  
+
+
+    <bean 
+        id="metiersDBSessionFactory" 
+        class="com.wavemaker.runtime.data.spring.ConfigurationAndSessionFactoryBean"
+        lazy-init="true">
+
+        <!-- A unique name for this SessionFactory's configuration -->
+        <property name="name" value="metiersDB"/>
+        <property name="dataSource" ref="metiersDBDataSource"/>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">${metiersDB.dialect}</prop>
+                <prop key="hibernate.transaction.factory_class">
+                    org.hibernate.transaction.JDBCTransactionFactory
+                </prop>
+                <prop key="hibernate.current_session_context_class">thread</prop>
+                
+            </props> 
+        </property>
+
+        <property name="mappingResources">
+            <list>
+
+<value>com/metiersdb/data/Clients.hbm.xml</value>
+<value>com/metiersdb/data/Opencritere.hbm.xml</value>
+<value>com/metiersdb/data/Sinistres.hbm.xml</value>
+<value>com/metiersdb/data/Utilisateurs.hbm.xml</value>
+<value>com/metiersdb/data/SinistresContexte.hbm.xml</value>
+<value>com/metiersdb/data/RefReport.hbm.xml</value>
+<value>com/metiersdb/data/Demo.hbm.xml</value>
+<value>com/metiersdb/data/Contrats.hbm.xml</value>
+<value>com/metiersdb/data/RefProduits.hbm.xml</value>
+<value>com/metiersdb/data/Taches.hbm.xml</value>
+<value>com/metiersdb/data/UserEvt.hbm.xml</value>
+<value>com/metiersdb/data/RefTransac.hbm.xml</value>
+<value>com/metiersdb/data/UserDroit.hbm.xml</value>
+<value>com/metiersdb/data/Sous.hbm.xml</value>
+<value>com/metiersdb/data/UserRole.hbm.xml</value>
+<value>com/metiersdb/data/UserStat.hbm.xml</value>
+<value>com/metiersdb/data/Inter.hbm.xml</value>
+<value>com/metiersdb/data/UserDem.hbm.xml</value>
+<value>com/metiersdb/data/UrlFavoris.hbm.xml</value>
+<value>com/metiersdb/data/Cotations.hbm.xml</value>
+<value>com/metiersdb/data/Opensource.hbm.xml</value>
+<value>com/metiersdb/data/Cre.hbm.xml</value>
+<value>com/metiersdb/data/Annuaire.hbm.xml</value>
+<value>com/metiersdb/data/Te.hbm.xml</value>
+<value>com/metiersdb/data/UrlLink.hbm.xml</value>
+
+<value>com/metiersdb/data/Clients.ql.xml</value>
+<value>com/metiersdb/data/app-queries.ql.xml</value>
+
+            </list>
+        </property>
+
+    </bean>
+
+
+    <!-- the data service bean instance is injected into the service bean -->
+    <bean 
+        id="metiersDBDataService" 
+        class="com.wavemaker.runtime.data.spring.SpringDataServiceManager"
+        lazy-init="true">
+        <constructor-arg>
+            <!-- the value of the "name" property of the SessionFactory -->
+            <value>metiersDB</value>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="metiersDBHibernateTemplate"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="metiersDBTxMgr"/>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="metiersDBTaskMgr"/>
+        </constructor-arg>
+        <constructor-arg>
+            <map>
+                <entry key="useIndividualCRUDOperations" value="false"/>
+                <entry key="refreshEntities" value=""/> 
+            </map>
+        </constructor-arg>
+    </bean>
+
+
+    <bean 
+        id="metiersDBTaskMgr"
+        class="com.wavemaker.runtime.data.DefaultTaskManager"
+        lazy-init="true"/>
+
+    <bean class="com.wavemaker.runtime.service.events.EventWire"
+        lazy-init="false">
+        <property name="serviceWire" ref="metiersDBServiceWire"/>
+        <property name="eventListener">
+            <bean class="com.wavemaker.runtime.data.DataServiceEventListener"/>
+        </property>
+    </bean>
+
+    <bean id="metiersDBServiceWire"
+        class="com.wavemaker.runtime.service.reflect.ReflectServiceWire"
+        lazy-init="false" scope="singleton">
+        <property name="serviceId" value="metiersDB"/>
+        <property name="serviceType" ref="DataService"/>
+    </bean>
+
+</beans>

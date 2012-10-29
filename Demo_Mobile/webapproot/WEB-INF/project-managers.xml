@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd" xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <bean class="com.wavemaker.runtime.service.TypeManager" parent="typeManagerBase" scope="singleton" id="typeManager">
+        <property name="types">
+            <map merge="true">
+                <entry key="metiersDB">
+                    <list>
+                        <value>com.metiersdb.data.Annuaire</value>
+                        <value>com.metiersdb.data.Clients</value>
+                        <value>com.metiersdb.data.Contrats</value>
+                        <value>com.metiersdb.data.Cotations</value>
+                        <value>com.metiersdb.data.Cre</value>
+                        <value>com.metiersdb.data.Demo</value>
+                        <value>com.metiersdb.data.Inter</value>
+                        <value>com.metiersdb.data.Opencritere</value>
+                        <value>com.metiersdb.data.Opensource</value>
+                        <value>com.metiersdb.data.RefProduits</value>
+                        <value>com.metiersdb.data.RefReport</value>
+                        <value>com.metiersdb.data.RefTransac</value>
+                        <value>com.metiersdb.data.Sinistres</value>
+                        <value>com.metiersdb.data.SinistresContexte</value>
+                        <value>com.metiersdb.data.Sous</value>
+                        <value>com.metiersdb.data.Taches</value>
+                        <value>com.metiersdb.data.Te</value>
+                        <value>com.metiersdb.data.UrlFavoris</value>
+                        <value>com.metiersdb.data.UrlLink</value>
+                        <value>com.metiersdb.data.UserDem</value>
+                        <value>com.metiersdb.data.UserDroit</value>
+                        <value>com.metiersdb.data.UserEvt</value>
+                        <value>com.metiersdb.data.UserRole</value>
+                        <value>com.metiersdb.data.UserStat</value>
+                        <value>com.metiersdb.data.Utilisateurs</value>
+                        <value>com.metiersdb.data.CotationsId</value>
+                        <value>com.metiersdb.data.CreId</value>
+                        <value>com.metiersdb.data.TachesId</value>
+                        <value>com.metiersdb.data.SousId</value>
+                        <value>com.metiersdb.data.RefProduitsId</value>
+                        <value>com.metiersdb.data.OpensourceId</value>
+                        <value>com.metiersdb.data.SinistresContexteId</value>
+                        <value>com.metiersdb.data.UserDroitId</value>
+                        <value>com.metiersdb.data.RefTransacId</value>
+                        <value>com.metiersdb.data.TeId</value>
+                        <value>com.metiersdb.data.SinistresId</value>
+                        <value>com.metiersdb.data.OpencritereId</value>
+                        <value>com.metiersdb.data.InterId</value>
+                    </list>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

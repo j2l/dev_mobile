@@ -1,0 +1,106 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Sous" table="sous" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.SousId">
+            <key-property name="numClient" type="string">
+                <column name="NUM_CLIENT" length="9"/>
+            </key-property>
+            <key-property name="numMk1" type="string">
+                <column name="NUM_MK1" length="12"/>
+            </key-property>
+            <key-property name="numAsi" type="string">
+                <column name="NUM_ASI" length="15"/>
+            </key-property>
+            <key-property name="numSousSma" type="string">
+                <column name="NUM_SOUS_SMA" length="15"/>
+            </key-property>
+            <key-property name="ug" type="string">
+                <column name="UG" length="4"/>
+            </key-property>
+            <key-property name="bd" type="string">
+                <column name="BD" length="4"/>
+            </key-property>
+            <key-property name="creeLe" type="string">
+                <column name="CREE_LE" length="10"/>
+            </key-property>
+            <key-property name="creeA" type="string">
+                <column name="CREE_A" length="8"/>
+            </key-property>
+            <key-property name="modifLe" type="string">
+                <column name="MODIF_LE" length="10"/>
+            </key-property>
+            <key-property name="modifA" type="string">
+                <column name="MODIF_A" length="8"/>
+            </key-property>
+            <key-property name="nomUtilisateur" type="string">
+                <column name="NOM_UTILISATEUR" length="10"/>
+            </key-property>
+            <key-property name="natureAdresse" type="string">
+                <column name="NATURE_ADRESSE" length="3"/>
+            </key-property>
+            <key-property name="typeAdresse" type="string">
+                <column name="TYPE_ADRESSE" length="1"/>
+            </key-property>
+            <key-property name="naturePersonne" type="string">
+                <column name="NATURE_PERSONNE" length="1"/>
+            </key-property>
+            <key-property name="sigle" type="string">
+                <column name="SIGLE" length="12"/>
+            </key-property>
+            <key-property name="civilite" type="string">
+                <column name="CIVILITE" length="5"/>
+            </key-property>
+            <key-property name="prenom" type="string">
+                <column name="PRENOM" length="38"/>
+            </key-property>
+            <key-property name="nomDenomination" type="string">
+                <column name="NOM_DENOMINATION" length="38"/>
+            </key-property>
+            <key-property name="codeComplIdent" type="string">
+                <column name="CODE_COMPL_IDENT" length="15"/>
+            </key-property>
+            <key-property name="complIdent" type="string">
+                <column name="COMPL_IDENT" length="38"/>
+            </key-property>
+            <key-property name="complDistribution" type="string">
+                <column name="COMPL_DISTRIBUTION" length="38"/>
+            </key-property>
+            <key-property name="lieuDit" type="string">
+                <column name="LIEU_DIT" length="38"/>
+            </key-property>
+            <key-property name="voie" type="string">
+                <column name="VOIE" length="38"/>
+            </key-property>
+            <key-property name="codePostal" type="string">
+                <column name="CODE_POSTAL" length="5"/>
+            </key-property>
+            <key-property name="nomLocalite" type="string">
+                <column name="NOM_LOCALITE" length="32"/>
+            </key-property>
+            <key-property name="codePays" type="string">
+                <column name="CODE_PAYS" length="3"/>
+            </key-property>
+            <key-property name="telephone" type="string">
+                <column name="TELEPHONE" length="15"/>
+            </key-property>
+            <key-property name="telecopie" type="string">
+                <column name="TELECOPIE" length="15"/>
+            </key-property>
+            <key-property name="finUtilisation" type="string">
+                <column name="FIN_UTILISATION" length="8"/>
+            </key-property>
+            <key-property name="creationAdresse" type="string">
+                <column name="CREATION_ADRESSE" length="8"/>
+            </key-property>
+            <key-property name="derniereMaj" type="string">
+                <column name="DERNIERE_MAJ" length="8"/>
+            </key-property>
+            <key-property name="debutValidite" type="string">
+                <column name="DEBUT_VALIDITE" length="8"/>
+            </key-property>
+            <key-property name="nomUtilisateurAdresse" type="string">
+                <column name="NOM_UTILISATEUR_ADRESSE" length="10"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

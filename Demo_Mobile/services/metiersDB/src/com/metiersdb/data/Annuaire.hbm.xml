@@ -1,0 +1,45 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Annuaire" table="annuaire" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="badge" type="string">
+            <column name="badge" length="10"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="prenom" type="string">
+            <column name="prenom" length="20"/>
+        </property>
+        <property name="nom" type="string">
+            <column name="nom" length="30"/>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="50"/>
+        </property>
+        <property name="poste" type="string">
+            <column name="poste" length="10"/>
+        </property>
+        <property name="telephone" type="string">
+            <column name="telephone" length="20"/>
+        </property>
+        <property name="bureau" type="string">
+            <column name="bureau" length="60"/>
+        </property>
+        <property name="societe" type="string">
+            <column name="societe" length="20"/>
+        </property>
+        <property name="service" type="string">
+            <column name="service" length="30"/>
+        </property>
+        <property name="telephoneSecretariat" type="string">
+            <column name="telephone_secretariat" length="80"/>
+        </property>
+        <property name="adresse" type="string">
+            <column name="adresse" length="40"/>
+        </property>
+        <property name="ville" type="string">
+            <column name="ville" length="30"/>
+        </property>
+        <property name="cp" type="string">
+            <column name="cp" length="10"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.RefProduits" table="ref_produits" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.RefProduitsId">
+            <key-property name="ctynaa" type="big_decimal">
+                <column name="CTYNAA" precision="131089"/>
+            </key-property>
+            <key-property name="ctycak" type="string">
+                <column name="CTYCAK" length="2"/>
+            </key-property>
+            <key-property name="branche" type="string">
+                <column name="Branche" length="30"/>
+            </key-property>
+            <key-property name="sousBranche" type="string">
+                <column name="Sous_Branche" length="2"/>
+            </key-property>
+            <key-property name="sbrlab" type="string">
+                <column name="SBRLAB" length="30"/>
+            </key-property>
+            <key-property name="ctyca0" type="string">
+                <column name="CTYCA0" length="3"/>
+            </key-property>
+            <key-property name="ctylab" type="string">
+                <column name="CTYLAB" length="30"/>
+            </key-property>
+            <key-property name="ctylac" type="string">
+                <column name="CTYLAC" length="70"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Opencritere" table="opencritere" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.OpencritereId">
+            <key-property name="refOpenSource" type="integer">
+                <column name="RefOpenSource"/>
+            </key-property>
+            <key-property name="critereCode" type="string">
+                <column name="CritereCode" length="50"/>
+            </key-property>
+            <key-property name="critereNom" type="string">
+                <column name="CritereNom" length="50"/>
+            </key-property>
+            <key-property name="critereCategorie" type="string">
+                <column name="CritereCategorie" length="50"/>
+            </key-property>
+            <key-property name="critereDescription" type="string">
+                <column name="CritereDescription"/>
+            </key-property>
+            <key-property name="critereNote" type="integer">
+                <column name="CritereNote"/>
+            </key-property>
+            <key-property name="critereModele" type="boolean">
+                <column name="CritereModele"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

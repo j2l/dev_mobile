@@ -1,0 +1,100 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Cre" table="cre" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.CreId">
+            <key-property name="crnum" type="string">
+                <column name="CRNUM"/>
+            </key-property>
+            <key-property name="crpor" type="string">
+                <column name="CRPOR"/>
+            </key-property>
+            <key-property name="cruti" type="string">
+                <column name="CRUTI"/>
+            </key-property>
+            <key-property name="crdat" type="string">
+                <column name="CRDAT"/>
+            </key-property>
+            <key-property name="crdeb" type="string">
+                <column name="CRDEB"/>
+            </key-property>
+            <key-property name="crfin" type="string">
+                <column name="CRFIN"/>
+            </key-property>
+            <key-property name="cract" type="string">
+                <column name="CRACT"/>
+            </key-property>
+            <key-property name="craff" type="string">
+                <column name="CRAFF"/>
+            </key-property>
+            <key-property name="crnat" type="string">
+                <column name="CRNAT"/>
+            </key-property>
+            <key-property name="crobj" type="string">
+                <column name="CROBJ"/>
+            </key-property>
+            <key-property name="crlie" type="string">
+                <column name="CRLIE"/>
+            </key-property>
+            <key-property name="criss" type="string">
+                <column name="CRISS"/>
+            </key-property>
+            <key-property name="crqua" type="string">
+                <column name="CRQUA"/>
+            </key-property>
+            <key-property name="crcom" type="string">
+                <column name="CRCOM"/>
+            </key-property>
+            <key-property name="crdc1" type="string">
+                <column name="CRDC1"/>
+            </key-property>
+            <key-property name="crdc2" type="string">
+                <column name="CRDC2"/>
+            </key-property>
+            <key-property name="crdcr" type="string">
+                <column name="CRDCR"/>
+            </key-property>
+            <key-property name="crocr" type="string">
+                <column name="CROCR"/>
+            </key-property>
+            <key-property name="crdmo" type="string">
+                <column name="CRDMO"/>
+            </key-property>
+            <key-property name="cromo" type="string">
+                <column name="CROMO"/>
+            </key-property>
+            <key-property name="cra01" type="string">
+                <column name="CRA01"/>
+            </key-property>
+            <key-property name="cra02" type="string">
+                <column name="CRA02"/>
+            </key-property>
+            <key-property name="cra03" type="string">
+                <column name="CRA03"/>
+            </key-property>
+            <key-property name="cra04" type="string">
+                <column name="CRA04"/>
+            </key-property>
+            <key-property name="cra05" type="string">
+                <column name="CRA05"/>
+            </key-property>
+            <key-property name="cra06" type="string">
+                <column name="CRA06"/>
+            </key-property>
+            <key-property name="crerp" type="string">
+                <column name="CRERP"/>
+            </key-property>
+            <key-property name="crtcf" type="string">
+                <column name="CRTCF"/>
+            </key-property>
+            <key-property name="crtex" type="string">
+                <column name="CRTEX"/>
+            </key-property>
+            <key-property name="crpor2" type="string">
+                <column name="CRPOR2"/>
+            </key-property>
+            <key-property name="crsys" type="string">
+                <column name="CRSYS"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

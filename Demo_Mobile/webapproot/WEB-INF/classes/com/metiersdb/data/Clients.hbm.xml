@@ -1,0 +1,123 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Clients" table="clients" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="ref" type="long">
+            <column name="ref"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="nom" type="string">
+            <column name="nom" length="70"/>
+        </property>
+        <property name="prenom" type="string">
+            <column name="prenom" length="10"/>
+        </property>
+        <property name="adresse" type="string">
+            <column name="adresse" length="10"/>
+        </property>
+        <property name="codepostal" type="string">
+            <column name="codepostal" length="10"/>
+        </property>
+        <property name="ville" type="string">
+            <column name="ville" length="40"/>
+        </property>
+        <property name="codepays" type="string">
+            <column name="codepays" length="10"/>
+        </property>
+        <property name="telephone" type="string">
+            <column name="telephone" length="20"/>
+        </property>
+        <property name="fax" type="string">
+            <column name="fax" length="20"/>
+        </property>
+        <property name="datepremieresous" type="timestamp">
+            <column name="datepremieresous" length="35"/>
+        </property>
+        <property name="datedernieremaj" type="timestamp">
+            <column name="datedernieremaj" length="35"/>
+        </property>
+        <property name="creepar" type="string">
+            <column name="creepar" length="30"/>
+        </property>
+        <property name="modifpar" type="string">
+            <column name="modifpar" length="40"/>
+        </property>
+        <property name="etatiard" type="string">
+            <column name="etatiard" length="20"/>
+        </property>
+        <property name="etatvie" type="string">
+            <column name="etatvie" length="20"/>
+        </property>
+        <property name="etatcourtier" type="string">
+            <column name="etatcourtier" length="20"/>
+        </property>
+        <property name="siren" type="string">
+            <column name="siren" length="10"/>
+        </property>
+        <property name="siret" type="string">
+            <column name="siret" length="10"/>
+        </property>
+        <property name="datecreationent" type="timestamp">
+            <column name="datecreationent" length="35"/>
+        </property>
+        <property name="vip" type="boolean">
+            <column name="vip"/>
+        </property>
+        <property name="regcommerce" type="string">
+            <column name="regcommerce" length="60"/>
+        </property>
+        <property name="regmetier" type="string">
+            <column name="regmetier" length="20"/>
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="60"/>
+        </property>
+        <property name="notegenerale" type="string">
+            <column name="notegenerale" length="2010"/>
+        </property>
+        <property name="noteiard" type="string">
+            <column name="noteiard" length="1070"/>
+        </property>
+        <property name="notevie" type="string">
+            <column name="notevie" length="1740"/>
+        </property>
+        <property name="formejuridique" type="string">
+            <column name="formejuridique" length="10"/>
+        </property>
+        <property name="complidentification" type="string">
+            <column name="complidentification" length="40"/>
+        </property>
+        <property name="compladresse" type="string">
+            <column name="compladresse" length="40"/>
+        </property>
+        <property name="rue" type="string">
+            <column name="rue" length="40"/>
+        </property>
+        <property name="lieudit" type="string">
+            <column name="lieudit" length="40"/>
+        </property>
+        <property name="complidentification2" type="string">
+            <column name="complidentification2" length="40"/>
+        </property>
+        <property name="compldistribution" type="string">
+            <column name="compldistribution" length="40"/>
+        </property>
+        <property name="rueiard" type="string">
+            <column name="rueiard" length="40"/>
+        </property>
+        <property name="compldistributioniard" type="string">
+            <column name="compldistributioniard" length="40"/>
+        </property>
+        <property name="cpiard" type="string">
+            <column name="cpiard" length="10"/>
+        </property>
+        <property name="villeiard" type="string">
+            <column name="villeiard" length="40"/>
+        </property>
+        <property name="raisonsociale" type="string">
+            <column name="raisonsociale" length="60"/>
+        </property>
+        <property name="raisonsociale2" type="string">
+            <column name="raisonsociale2" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

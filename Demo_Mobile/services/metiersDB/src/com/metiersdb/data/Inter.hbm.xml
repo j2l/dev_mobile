@@ -1,0 +1,58 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Inter" table="inter" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.InterId">
+            <key-property name="numero" type="integer">
+                <column name="Numero"/>
+            </key-property>
+            <key-property name="nature" type="string">
+                <column name="Nature"/>
+            </key-property>
+            <key-property name="numInter" type="integer">
+                <column name="Num_Inter"/>
+            </key-property>
+            <key-property name="profil" type="string">
+                <column name="Profil"/>
+            </key-property>
+            <key-property name="nom" type="string">
+                <column name="Nom"/>
+            </key-property>
+            <key-property name="adresse1" type="string">
+                <column name="Adresse1"/>
+            </key-property>
+            <key-property name="adresse2" type="string">
+                <column name="Adresse2"/>
+            </key-property>
+            <key-property name="adresse3" type="string">
+                <column name="Adresse3"/>
+            </key-property>
+            <key-property name="adresse4" type="string">
+                <column name="Adresse4"/>
+            </key-property>
+            <key-property name="tel" type="string">
+                <column name="Tel"/>
+            </key-property>
+            <key-property name="fax" type="string">
+                <column name="Fax"/>
+            </key-property>
+            <key-property name="pays" type="string">
+                <column name="Pays"/>
+            </key-property>
+            <key-property name="civilite" type="string">
+                <column name="Civilite"/>
+            </key-property>
+            <key-property name="adrcci" type="string">
+                <column name="ADRCCI"/>
+            </key-property>
+            <key-property name="codePostal" type="integer">
+                <column name="CodePostal"/>
+            </key-property>
+            <key-property name="ville" type="string">
+                <column name="Ville"/>
+            </key-property>
+            <key-property name="sigle" type="string">
+                <column name="Sigle"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

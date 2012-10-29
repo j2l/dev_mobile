@@ -1,0 +1,81 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Contrats" table="contrats" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="code" type="string">
+            <column name="code" length="15"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="codeclient" type="string">
+            <column name="codeclient" length="15"/>
+        </property>
+        <property name="datecreation" type="timestamp">
+            <column name="datecreation" length="29"/>
+        </property>
+        <property name="numpolice" type="string">
+            <column name="numpolice" length="60"/>
+        </property>
+        <property name="sg" type="string">
+            <column name="sg" length="60"/>
+        </property>
+        <property name="branche" type="string">
+            <column name="branche" length="60"/>
+        </property>
+        <property name="societe" type="string">
+            <column name="societe" length="60"/>
+        </property>
+        <property name="societelib" type="string">
+            <column name="societelib" length="60"/>
+        </property>
+        <property name="famille" type="string">
+            <column name="famille" length="60"/>
+        </property>
+        <property name="famillelib" type="string">
+            <column name="famillelib" length="60"/>
+        </property>
+        <property name="produit" type="string">
+            <column name="produit" length="60"/>
+        </property>
+        <property name="produitlib" type="string">
+            <column name="produitlib" length="60"/>
+        </property>
+        <property name="numsous" type="string">
+            <column name="numsous" length="60"/>
+        </property>
+        <property name="affilieon" type="boolean">
+            <column name="affilieon"/>
+        </property>
+        <property name="affilie" type="string">
+            <column name="affilie" length="180"/>
+        </property>
+        <property name="affiliecodegrc" type="string">
+            <column name="affiliecodegrc" length="60"/>
+        </property>
+        <property name="afiliesous" type="string">
+            <column name="afiliesous" length="60"/>
+        </property>
+        <property name="affiliecontratent" type="string">
+            <column name="affiliecontratent" length="60"/>
+        </property>
+        <property name="exercice" type="string">
+            <column name="exercice" length="60"/>
+        </property>
+        <property name="exercicesc" type="double">
+            <column name="exercicesc" precision="17"/>
+        </property>
+        <property name="exerciecotis" type="double">
+            <column name="exerciecotis" precision="17"/>
+        </property>
+        <property name="modifdate" type="timestamp">
+            <column name="modifdate" length="29"/>
+        </property>
+        <property name="resildate" type="timestamp">
+            <column name="resildate" length="29"/>
+        </property>
+        <property name="exercicesinistres" type="double">
+            <column name="exercicesinistres" precision="17"/>
+        </property>
+        <property name="effetdate" type="timestamp">
+            <column name="effetdate" length="29"/>
+        </property>
+    </class>
+</hibernate-mapping>

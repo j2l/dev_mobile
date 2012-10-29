@@ -1,0 +1,36 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.UserDem" table="user_dem" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="demId" type="long">
+            <column name="dem_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="demNature" type="string">
+            <column name="dem_nature" length="20"/>
+        </property>
+        <property name="demDate" type="date">
+            <column name="dem_date" length="13"/>
+        </property>
+        <property name="demObjet" type="string">
+            <column name="dem_objet" length="50"/>
+        </property>
+        <property name="demDescription" type="string">
+            <column name="dem_description" length="250"/>
+        </property>
+        <property name="demDemandeur" type="string">
+            <column name="dem_demandeur" length="10"/>
+        </property>
+        <property name="demDestinataire" type="string">
+            <column name="dem_destinataire" length="10"/>
+        </property>
+        <property name="demDebut" type="date">
+            <column name="dem_debut" length="13"/>
+        </property>
+        <property name="demFin" type="date">
+            <column name="dem_fin" length="13"/>
+        </property>
+        <property name="demEtat" type="string">
+            <column name="dem_etat" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

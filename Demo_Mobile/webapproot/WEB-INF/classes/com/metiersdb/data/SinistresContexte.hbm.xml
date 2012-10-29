@@ -1,0 +1,79 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.SinistresContexte" table="sinistres_contexte" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.SinistresContexteId">
+            <key-property name="cdSource" type="string">
+                <column name="`CD-SOURCE`" length="3"/>
+            </key-property>
+            <key-property name="natDos" type="string">
+                <column name="`NAT-DOS`" length="2"/>
+            </key-property>
+            <key-property name="natFic" type="string">
+                <column name="`NAT-FIC`" length="2"/>
+            </key-property>
+            <key-property name="sousSystSrc" type="string">
+                <column name="`SOUS-SYST-SRC`" length="7"/>
+            </key-property>
+            <key-property name="noSinistre" type="string">
+                <column name="`NO-SINISTRE`" length="10"/>
+            </key-property>
+            <key-property name="natIdent" type="string">
+                <column name="`NAT-IDENT`" length="4"/>
+            </key-property>
+            <key-property name="natLieu" type="string">
+                <column name="`NAT-LIEU`" length="1"/>
+            </key-property>
+            <key-property name="lieuVille" type="string">
+                <column name="`LIEU-VILLE`" length="40"/>
+            </key-property>
+            <key-property name="filler1" type="string">
+                <column name="FILLER1" length="1"/>
+            </key-property>
+            <key-property name="lieuCpPost" type="string">
+                <column name="`LIEU-CP-POST`" length="5"/>
+            </key-property>
+            <key-property name="filler2" type="string">
+                <column name="FILLER2" length="1"/>
+            </key-property>
+            <key-property name="lieuRue" type="string">
+                <column name="`LIEU-RUE`" length="40"/>
+            </key-property>
+            <key-property name="natMinss" type="string">
+                <column name="`NAT-MINSS`" length="10"/>
+            </key-property>
+            <key-property name="libMinss" type="string">
+                <column name="`LIB-MINSS`" length="13"/>
+            </key-property>
+            <key-property name="natLeses" type="string">
+                <column name="`NAT-LESES`" length="9"/>
+            </key-property>
+            <key-property name="nombreLese" type="double">
+                <column name="`NOMBRE-LESE`" precision="17"/>
+            </key-property>
+            <key-property name="filler3" type="string">
+                <column name="FILLER3" length="1"/>
+            </key-property>
+            <key-property name="nom1erLese" type="string">
+                <column name="`NOM-1ER-LESE`" length="40"/>
+            </key-property>
+            <key-property name="natArch" type="string">
+                <column name="`NAT-ARCH`" length="11"/>
+            </key-property>
+            <key-property name="libArch" type="string">
+                <column name="`LIB-ARCH`" length="9"/>
+            </key-property>
+            <key-property name="libCorpo" type="string">
+                <column name="`LIB-CORPO`" length="12"/>
+            </key-property>
+            <key-property name="libContentieux" type="string">
+                <column name="`LIB-CONTENTIEUX`" length="15"/>
+            </key-property>
+            <key-property name="natLiens" type="string">
+                <column name="`NAT-LIENS`" length="9"/>
+            </key-property>
+            <key-property name="nbLiens" type="string">
+                <column name="`NB-LIENS`" length="3"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

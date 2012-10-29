@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Cotations" table="cotations" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.CotationsId">
+            <key-property name="codeValeur" type="string">
+                <column name="CodeValeur" length="50"/>
+            </key-property>
+            <key-property name="date" type="timestamp">
+                <column name="Date" length="29"/>
+            </key-property>
+            <key-property name="ouverture" type="double">
+                <column name="Ouverture" precision="17"/>
+            </key-property>
+            <key-property name="cloture" type="double">
+                <column name="Cloture" precision="17"/>
+            </key-property>
+            <key-property name="haut" type="double">
+                <column name="Haut" precision="17"/>
+            </key-property>
+            <key-property name="bas" type="double">
+                <column name="Bas" precision="17"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

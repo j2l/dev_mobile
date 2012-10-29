@@ -1,0 +1,39 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.UserEvt" table="user_evt" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="evtId" type="long">
+            <column name="evt_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="evtDate" type="date">
+            <column name="evt_date" length="13"/>
+        </property>
+        <property name="evtDomaine" type="string">
+            <column name="evt_domaine" length="20"/>
+        </property>
+        <property name="evtNature" type="string">
+            <column name="evt_nature" length="20"/>
+        </property>
+        <property name="evtOrigine" type="string">
+            <column name="evt_origine" length="20"/>
+        </property>
+        <property name="evtClient" type="string">
+            <column name="evt_client" length="10"/>
+        </property>
+        <property name="evtContrat" type="string">
+            <column name="evt_contrat" length="20"/>
+        </property>
+        <property name="evtSinistre" type="string">
+            <column name="evt_sinistre" length="20"/>
+        </property>
+        <property name="evtTelephone" type="string">
+            <column name="evt_telephone" length="20"/>
+        </property>
+        <property name="evtAction" type="string">
+            <column name="evt_action" length="20"/>
+        </property>
+        <property name="evtCommentaire" type="string">
+            <column name="evt_commentaire"/>
+        </property>
+    </class>
+</hibernate-mapping>

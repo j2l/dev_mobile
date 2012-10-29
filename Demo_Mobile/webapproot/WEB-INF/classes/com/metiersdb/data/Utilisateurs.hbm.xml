@@ -1,0 +1,33 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Utilisateurs" table="utilisateurs" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="badge" type="string">
+            <column name="BADGE"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="numero" type="integer">
+            <column name="Numero"/>
+        </property>
+        <property name="nom" type="string">
+            <column name="NOM"/>
+        </property>
+        <property name="prenom" type="string">
+            <column name="PRENOM"/>
+        </property>
+        <property name="telephone" type="string">
+            <column name="TELEPHONE"/>
+        </property>
+        <property name="societe" type="string">
+            <column name="SOCIETE"/>
+        </property>
+        <property name="service" type="string">
+            <column name="SERVICE"/>
+        </property>
+        <property name="pass" type="string">
+            <column name="PASS" length="50"/>
+        </property>
+        <property name="role" type="string">
+            <column name="role" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

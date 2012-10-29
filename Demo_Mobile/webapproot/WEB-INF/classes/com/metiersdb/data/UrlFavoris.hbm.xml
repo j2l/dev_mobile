@@ -1,0 +1,21 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.UrlFavoris" table="url_favoris" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="favId" type="long">
+            <column name="fav_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="favBadge" type="string">
+            <column name="fav_badge" length="10" not-null="true"/>
+        </property>
+        <property name="favDossier" type="string">
+            <column name="fav_dossier" length="10"/>
+        </property>
+        <property name="favNom" type="string">
+            <column name="fav_nom" length="100"/>
+        </property>
+        <property name="favUrl" type="string">
+            <column name="fav_url" length="250"/>
+        </property>
+    </class>
+</hibernate-mapping>

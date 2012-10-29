@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.UserStat" table="user_stat" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="statId" type="long">
+            <column name="stat_id"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="statUser" type="long">
+            <column name="stat_user"/>
+        </property>
+        <property name="statDate" type="date">
+            <column name="stat_date" length="13"/>
+        </property>
+        <property name="statJoursemaine" type="long">
+            <column name="stat_joursemaine"/>
+        </property>
+        <property name="statOrigine" type="string">
+            <column name="stat_origine" length="20"/>
+        </property>
+        <property name="statNature" type="string">
+            <column name="stat_nature" length="20"/>
+        </property>
+        <property name="statValeur" type="long">
+            <column name="stat_valeur"/>
+        </property>
+        <property name="statUnite" type="string">
+            <column name="stat_unite" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+{
+	"methods": [{
+		"name": "getClientsById",
+		"operationType": "hqlquery",
+		"parameters": [{
+			"name": "id",
+			"type": "java.lang.Long"
+		}],
+		"returnType": "com.metiersdb.data.Clients"
+	}],
+	"serviceType": "JSON-RPC",
+	"serviceURL": "metiersDB.json"
+}

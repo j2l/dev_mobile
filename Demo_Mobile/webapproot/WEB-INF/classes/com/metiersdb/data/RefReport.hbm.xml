@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.RefReport" table="ref_report" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="codeReport" type="string">
+            <column name="Code_Report" length="50"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="nomReport" type="string">
+            <column name="Nom_Report" length="50"/>
+        </property>
+        <property name="descriptionReport" type="string">
+            <column name="Description_Report"/>
+        </property>
+        <property name="urlReport" type="string">
+            <column name="Url_Report" length="250"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,67 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.UserDroit" table="user_droit" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.UserDroitId">
+            <key-property name="prenom" type="string">
+                <column name="prenom" length="20"/>
+            </key-property>
+            <key-property name="nom" type="string">
+                <column name="nom" length="30"/>
+            </key-property>
+            <key-property name="badge" type="string">
+                <column name="badge" length="10"/>
+            </key-property>
+            <key-property name="email" type="string">
+                <column name="email" length="50"/>
+            </key-property>
+            <key-property name="poste" type="string">
+                <column name="poste" length="10"/>
+            </key-property>
+            <key-property name="telephone" type="string">
+                <column name="telephone" length="20"/>
+            </key-property>
+            <key-property name="bureau" type="string">
+                <column name="bureau" length="60"/>
+            </key-property>
+            <key-property name="societe" type="string">
+                <column name="societe" length="20"/>
+            </key-property>
+            <key-property name="service" type="string">
+                <column name="service" length="30"/>
+            </key-property>
+            <key-property name="telephoneSecretariat" type="string">
+                <column name="telephone_secretariat" length="80"/>
+            </key-property>
+            <key-property name="adresse" type="string">
+                <column name="adresse" length="40"/>
+            </key-property>
+            <key-property name="ville" type="string">
+                <column name="ville" length="30"/>
+            </key-property>
+            <key-property name="cp" type="string">
+                <column name="cp" length="10"/>
+            </key-property>
+            <key-property name="badgeRole" type="string">
+                <column name="badge_role" length="10"/>
+            </key-property>
+            <key-property name="pass" type="string">
+                <column name="pass" length="15"/>
+            </key-property>
+            <key-property name="role" type="string">
+                <column name="role" length="10"/>
+            </key-property>
+            <key-property name="ddebut" type="date">
+                <column name="ddebut" length="13"/>
+            </key-property>
+            <key-property name="dfin" type="date">
+                <column name="dfin" length="13"/>
+            </key-property>
+            <key-property name="commentaire" type="string">
+                <column name="commentaire"/>
+            </key-property>
+            <key-property name="verrouille" type="boolean">
+                <column name="verrouille"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

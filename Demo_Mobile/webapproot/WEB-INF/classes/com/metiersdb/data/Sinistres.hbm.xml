@@ -1,0 +1,88 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Sinistres" table="sinistres" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.SinistresId">
+            <key-property name="cdSource" type="string">
+                <column name="CD_SOURCE" length="3"/>
+            </key-property>
+            <key-property name="natDos" type="string">
+                <column name="NAT_DOS" length="2"/>
+            </key-property>
+            <key-property name="natFic" type="string">
+                <column name="NAT_FIC" length="2"/>
+            </key-property>
+            <key-property name="sousSystSrc" type="string">
+                <column name="SOUS_SYST_SRC" length="7"/>
+            </key-property>
+            <key-property name="noSinistre" type="string">
+                <column name="NO_SINISTRE" length="10"/>
+            </key-property>
+            <key-property name="natIdent" type="string">
+                <column name="NAT_IDENT" length="4"/>
+            </key-property>
+            <key-property name="noClientExt" type="string">
+                <column name="NO_CLIENT_EXT" length="7"/>
+            </key-property>
+            <key-property name="natIdentC" type="string">
+                <column name="NAT_IDENT_C" length="4"/>
+            </key-property>
+            <key-property name="noPoliceExt" type="string">
+                <column name="NO_POLICE_EXT" length="14"/>
+            </key-property>
+            <key-property name="natIdentP" type="string">
+                <column name="NAT_IDENT_P" length="4"/>
+            </key-property>
+            <key-property name="cdSociete" type="string">
+                <column name="CD_SOCIETE" length="1"/>
+            </key-property>
+            <key-property name="cdProduit" type="string">
+                <column name="CD_PRODUIT" length="4"/>
+            </key-property>
+            <key-property name="natIdentProd" type="string">
+                <column name="NAT_IDENT_PROD" length="4"/>
+            </key-property>
+            <key-property name="dateSurv" type="timestamp">
+                <column name="DATE_SURV" length="29"/>
+            </key-property>
+            <key-property name="dateDeclaration" type="timestamp">
+                <column name="DATE_DECLARATION" length="29"/>
+            </key-property>
+            <key-property name="dateDroc" type="timestamp">
+                <column name="DATE_DROC" length="29"/>
+            </key-property>
+            <key-property name="dateClos" type="timestamp">
+                <column name="DATE_CLOS" length="29"/>
+            </key-property>
+            <key-property name="dateArch" type="timestamp">
+                <column name="DATE_ARCH" length="29"/>
+            </key-property>
+            <key-property name="dateEpur" type="timestamp">
+                <column name="DATE_EPUR" length="29"/>
+            </key-property>
+            <key-property name="etat" type="string">
+                <column name="ETAT" length="2"/>
+            </key-property>
+            <key-property name="mtRegle" type="double">
+                <column name="MT_REGLE" precision="17"/>
+            </key-property>
+            <key-property name="mtEvaRest" type="double">
+                <column name="MT_EVA_REST" precision="17"/>
+            </key-property>
+            <key-property name="libNatSin" type="string">
+                <column name="LIB_NAT_SIN" length="35"/>
+            </key-property>
+            <key-property name="sepExp" type="string">
+                <column name="SEP_EXP" length="1"/>
+            </key-property>
+            <key-property name="cdFamSin" type="string">
+                <column name="CD_FAM_SIN" length="1"/>
+            </key-property>
+            <key-property name="ugSin" type="string">
+                <column name="UG_SIN" length="2"/>
+            </key-property>
+            <key-property name="cdRedact" type="string">
+                <column name="CD_REDACT" length="4"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

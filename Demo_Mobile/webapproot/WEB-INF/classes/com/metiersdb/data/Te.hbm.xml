@@ -1,0 +1,22 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Te" table="te" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.TeId">
+            <key-property name="_" type="string">
+                <column name="1"/>
+            </key-property>
+            <key-property name="__1" type="string">
+                <column name="2"/>
+            </key-property>
+            <key-property name="__2" type="string">
+                <column name="3"/>
+            </key-property>
+            <key-property name="__3" type="string">
+                <column name="4"/>
+            </key-property>
+            <key-property name="__4" type="string">
+                <column name="5"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

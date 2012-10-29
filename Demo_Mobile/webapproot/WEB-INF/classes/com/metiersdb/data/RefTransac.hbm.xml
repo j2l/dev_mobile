@@ -1,0 +1,25 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.RefTransac" table="ref_transac" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.RefTransacId">
+            <key-property name="systeme" type="string">
+                <column name="Systeme" length="50"/>
+            </key-property>
+            <key-property name="ordre" type="integer">
+                <column name="Ordre"/>
+            </key-property>
+            <key-property name="codeTransac" type="string">
+                <column name="CodeTransac" length="50"/>
+            </key-property>
+            <key-property name="transaction" type="string">
+                <column name="Transaction" length="100"/>
+            </key-property>
+            <key-property name="domaine" type="string">
+                <column name="Domaine" length="50"/>
+            </key-property>
+            <key-property name="scriptShell" type="string">
+                <column name="Script_Shell"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

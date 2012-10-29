@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.UrlLink" table="url_link" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <id name="urlId" type="integer">
+            <column name="url_id"/>
+            <generator class="identity"/>
+        </id>
+        <property name="urlRole" type="string">
+            <column name="url_role" length="40" not-null="true"/>
+        </property>
+        <property name="urlCategorie" type="string">
+            <column name="url_categorie" length="50" not-null="true"/>
+        </property>
+        <property name="urlNom" type="string">
+            <column name="url_nom" length="50" not-null="true"/>
+        </property>
+        <property name="urlText" type="string">
+            <column name="url_text" not-null="true"/>
+        </property>
+        <property name="urlEnv" type="string">
+            <column name="url_env" length="10" not-null="true"/>
+        </property>
+        <property name="urlValidite" type="date">
+            <column name="url_validite" length="13"/>
+        </property>
+        <property name="urlComment" type="string">
+            <column name="url_comment"/>
+        </property>
+    </class>
+</hibernate-mapping>

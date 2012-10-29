@@ -1,0 +1,55 @@
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.metiersdb.data.Opensource" table="opensource" schema="metiers" dynamic-insert="false" dynamic-update="false">
+        <composite-id name="id" class="com.metiersdb.data.OpensourceId">
+            <key-property name="refOpenSource" type="integer">
+                <column name="RefOpenSource"/>
+            </key-property>
+            <key-property name="nomSolution" type="string">
+                <column name="NomSolution" length="50"/>
+            </key-property>
+            <key-property name="societe" type="string">
+                <column name="Societe" length="50"/>
+            </key-property>
+            <key-property name="fonction" type="string">
+                <column name="Fonction" length="120"/>
+            </key-property>
+            <key-property name="description" type="string">
+                <column name="Description"/>
+            </key-property>
+            <key-property name="environnements" type="string">
+                <column name="Environnements" length="250"/>
+            </key-property>
+            <key-property name="plateForme" type="string">
+                <column name="PlateForme" length="120"/>
+            </key-property>
+            <key-property name="langage" type="string">
+                <column name="Langage" length="250"/>
+            </key-property>
+            <key-property name="licence" type="string">
+                <column name="Licence" length="50"/>
+            </key-property>
+            <key-property name="dateFondation" type="timestamp">
+                <column name="DateFondation" length="29"/>
+            </key-property>
+            <key-property name="nbInstallation" type="integer">
+                <column name="NbInstallation"/>
+            </key-property>
+            <key-property name="siteUrl" type="string">
+                <column name="SiteUrl" length="250"/>
+            </key-property>
+            <key-property name="downloadUrl" type="string">
+                <column name="DownloadUrl" length="20"/>
+            </key-property>
+            <key-property name="version" type="string">
+                <column name="Version" length="50"/>
+            </key-property>
+            <key-property name="dateVersion" type="timestamp">
+                <column name="DateVersion" length="29"/>
+            </key-property>
+            <key-property name="liensUtiles" type="string">
+                <column name="LiensUtiles"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
